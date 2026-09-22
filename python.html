@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Python Basics — Introduction to Programming</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <div class="brand">
+      <div class="tag">&lt;/&gt;</div>
+      <div>Introduction to Programming<small>Network School · Ansel Lim</small></div>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="python.html" class="active">Python</a>
+      <a href="html.html">HTML &amp; CSS</a>
+      <a href="test.html">Test Yourself</a>
+      <a href="challenge.html">Challenge</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="kicker">Part One</div>
+    <h1 class="page-title">Python Basics</h1>
+    <p class="lede">Install Python, then get comfortable with the five data types you'll use every day: strings, integers, variables, tuples and dictionaries.</p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ===================== INSTALL ===================== -->
+  <section class="lesson" id="install">
+    <h2>Installing Python</h2>
+    <p class="desc">Pick your computer below and run the commands in your terminal.</p>
+
+    <div class="tabs" data-target="install">
+      <button class="tab-btn active" data-tab="mac">macOS · Terminal</button>
+      <button class="tab-btn" data-tab="win">Windows · PowerShell</button>
+    </div>
+
+    <div class="tab-panel active" data-tab="mac" data-group="install">
+      <div class="code-block">
+        <div class="code-label">
+          <span>Terminal</span>
+          <button class="copy-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            Copy
+          </button>
+        </div>
+        <pre><code>brew install python
+python3 --version</code></pre>
+      </div>
+      <p class="desc" style="margin-top:10px; font-size:12.5px;"><em>brew installs the latest stable release; <code>python3 --version</code> confirms it worked. Don't have Homebrew? Install it first from brew.sh.</em></p>
+    </div>
+
+    <div class="tab-panel" data-tab="win" data-group="install">
+      <div class="code-block">
+        <div class="code-label">
+          <span>PowerShell</span>
+          <button class="copy-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            Copy
+          </button>
+        </div>
+        <pre><code>winget install Python.Python.3.14
+python --version
+pip --version</code></pre>
+      </div>
+      <p class="desc" style="margin-top:10px; font-size:12.5px;"><em>winget installs the latest release from the Microsoft Store catalogue. Both commands confirm Python and pip are ready.</em></p>
+    </div>
+  </section>
+
+  <!-- ===================== STRINGS ===================== -->
+  <section class="lesson" id="strings">
+    <div class="kicker blue">Data Types</div>
+    <h2>Strings — text</h2>
+    <p class="desc">A string holds text, written inside quotes. Combine strings with <code>+</code>.</p>
+    <div class="two-col">
+      <div class="code-block">
+        <div class="code-label"><span>Python</span>
+          <button class="copy-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>Copy</button>
+        </div>
+        <pre><code>name = "Ansel"
+print("Hello, " + name)</code></pre>
+      </div>
+      <div class="output-pill"><span class="label">Output</span>Hello, Ansel</div>
+    </div>
+  </section>
+
+  <!-- ===================== INTEGERS ===================== -->
+  <section class="lesson" id="integers">
+    <div class="kicker blue">Data Types</div>
+    <h2>Integers — whole numbers</h2>
+    <p class="desc">An integer is a whole number, positive or negative, used for counting and maths.</p>
+    <div class="two-col">
+      <div class="code-block">
+        <div class="code-label"><span>Python</span>
+          <button class="copy-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>Copy</button>
+        </div>
+        <pre><code>age = 16
+print(age + 4)</code></pre>
+      </div>
+      <div class="output-pill"><span class="label">Output</span>20</div>
+    </div>
+  </section>
+
+  <!-- ===================== VARIABLES ===================== -->
+  <section class="lesson" id="variables">
+    <div class="kicker blue">Data Types</div>
+    <h2>Variables — named boxes</h2>
+    <p class="desc">A variable stores a value under a name. Its value can change (be reassigned) later.</p>
+    <div class="two-col">
+      <div class="code-block">
+        <div class="code-label"><span>Python</span>
+          <button class="copy-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>Copy</button>
+        </div>
+        <pre><code>score = 10
+score = score + 5
+print(score)</code></pre>
+      </div>
+      <div class="output-pill"><span class="label">Output</span>15</div>
+    </div>
+  </section>
+
+  <!-- ===================== TUPLES ===================== -->
+  <section class="lesson" id="tuples">
+    <div class="kicker blue">Data Types</div>
+    <h2>Tuples — fixed, ordered lists</h2>
+    <p class="desc">A tuple groups several values in order, written with <code>( )</code>. Once created, it cannot be changed. <code>fruits[1]</code> is the 2nd item — Python counts from 0.</p>
+    <div class="two-col">
+      <div class="code-block">
+        <div class="code-label"><span>Python</span>
+          <button class="copy-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>Copy</button>
+        </div>
+        <pre><code>fruits = ("apple", "banana", "cherry")
+print(fruits[1])</code></pre>
+      </div>
+      <div class="output-pill"><span class="label">Output</span>banana</div>
+    </div>
+  </section>
+
+  <!-- ===================== DICTIONARIES ===================== -->
+  <section class="lesson" id="dictionaries">
+    <div class="kicker blue">Data Types</div>
+    <h2>Dictionaries — key → value pairs</h2>
+    <p class="desc">A dictionary stores data as key → value pairs, written with <code>{ }</code>. Look up any value instantly using its key — much faster than searching a list.</p>
+    <div class="two-col">
+      <div class="code-block">
+        <div class="code-label"><span>Python</span>
+          <button class="copy-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>Copy</button>
+        </div>
+        <pre><code>student = {
+    "name": "Ansel",
+    "age": 16,
+    "class": "Y11"
+}
+
+print(student["name"])
+print(student["age"])</code></pre>
+      </div>
+      <div>
+        <div class="output-pill"><span class="label">Output</span>Ansel<br>16</div>
+        <div class="ref-card" style="margin-top:14px;">
+          <h4 style="color:var(--py-blue);">Key ideas</h4>
+          <table>
+            <tr><td>Key</td><td>the label you look values up by, e.g. "name"</td></tr>
+            <tr><td>Value</td><td>the data stored under that key, e.g. "Ansel"</td></tr>
+            <tr><td>Add / update</td><td><code>student["age"] = 17</code> sets or overwrites a value</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  Introduction to Programming · Network School · <a href="html.html" style="color:var(--py-blue); font-weight:700;">Next: HTML &amp; CSS →</a>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

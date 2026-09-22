@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Test Yourself — Introduction to Programming</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <div class="brand">
+      <div class="tag">&lt;/&gt;</div>
+      <div>Introduction to Programming<small>Network School · Ansel Lim</small></div>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="python.html">Python</a>
+      <a href="html.html">HTML &amp; CSS</a>
+      <a href="test.html" class="active">Test Yourself</a>
+      <a href="challenge.html">Challenge</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="kicker blue">Assessment</div>
+    <h1 class="page-title">Test Yourself</h1>
+    <p class="lede">Try to solve each problem on paper or in your own editor first. Only click "Show Answer" once you've had a real go.</p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="lesson" id="q1" style="border-bottom:none; padding-bottom:0;">
+
+    <div class="question-card">
+      <div class="q-num">QUESTION 1 · PYTHON · VARIABLES &amp; DICTIONARIES</div>
+      <h3>Add up a shopping cart</h3>
+      <p class="prompt">
+        A shop sells duck, chicken and fish. Create three variables — <code>duck</code>, <code>chicken</code> and <code>fish</code> —
+        and set each one to a price (a whole number, in dollars). Add the three variables together to get a total.
+        Then create a dictionary called <code>cart</code> and store that total inside it under the key
+        <code>"totalCost"</code>. Finally, print the dictionary.
+      </p>
+
+      <button class="reveal-btn" data-target="answer-1">Show Answer</button>
+
+      <div class="answer-box" id="answer-1">
+        <div class="answer-tag">Solution</div>
+        <div class="code-block">
+          <div class="code-label"><span>Python</span>
+            <button class="copy-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>Copy</button>
+          </div>
+          <pre><code>duck = 18
+chicken = 9
+fish = 12
+
+total = duck + chicken + fish
+
+cart = {}
+cart["totalCost"] = total
+
+print(cart)</code></pre>
+        </div>
+        <div class="output-pill"><span class="label">Output</span>{'totalCost': 39}</div>
+        <p class="desc" style="margin:14px 0 0; font-size:12.5px;">Any three prices work — what matters is that <code>duck + chicken + fish</code> is stored under the <code>"totalCost"</code> key of the dictionary.</p>
+      </div>
+    </div>
+
+    <div class="question-card">
+      <div class="q-num">QUESTION 2 · HTML &amp; CSS · LAYOUT</div>
+      <h3>Center a box on the page</h3>
+      <p class="prompt">
+        Write the CSS that centers a <code>&lt;div class="box"&gt;</code> both horizontally and vertically in the middle
+        of the whole page, using flexbox.
+      </p>
+
+      <button class="reveal-btn" data-target="answer-2">Show Answer</button>
+
+      <div class="answer-box" id="answer-2">
+        <div class="answer-tag">Solution</div>
+        <div class="code-block">
+          <div class="code-label"><span>CSS</span>
+            <button class="copy-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>Copy</button>
+          </div>
+          <pre><code>body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}</code></pre>
+        </div>
+        <p class="desc" style="margin:14px 0 0; font-size:12.5px;"><code>justify-content: center</code> centers left/right, <code>align-items: center</code> centers top/bottom.</p>
+      </div>
+    </div>
+
+    <div class="question-card">
+      <div class="q-num">QUESTION 3 · HTML &amp; CSS · TAGS</div>
+      <h3>Pick the right tag</h3>
+      <p class="prompt">
+        You need a numbered step-by-step list. Which tag wraps the list, and which tag wraps each step?
+      </p>
+
+      <button class="reveal-btn" data-target="answer-3">Show Answer</button>
+
+      <div class="answer-box" id="answer-3">
+        <div class="answer-tag">Solution</div>
+        <div class="code-block">
+          <div class="code-label"><span>HTML</span>
+            <button class="copy-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>Copy</button>
+          </div>
+          <pre><code>&lt;ol&gt;
+  &lt;li&gt;Preheat oven&lt;/li&gt;
+  &lt;li&gt;Mix batter&lt;/li&gt;
+  &lt;li&gt;Bake 20 min&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+        </div>
+        <p class="desc" style="margin:14px 0 0; font-size:12.5px;"><code>&lt;ol&gt;</code> — an ordered (numbered) list. If order didn't matter, <code>&lt;ul&gt;</code> (bulleted) would be correct instead. Each step is an <code>&lt;li&gt;</code> either way.</p>
+      </div>
+    </div>
+
+  </section>
+
+</main>
+
+<footer>
+  Introduction to Programming · Network School · <a href="challenge.html" style="color:var(--py-blue); font-weight:700;">Next: The Challenge →</a>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

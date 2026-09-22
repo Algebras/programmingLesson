@@ -1,0 +1,494 @@
+/* ============================================================
+   Introduction to Programming — Network School
+   Shared stylesheet
+   ============================================================ */
+
+:root {
+  --ink: #16181d;
+  --dark: #111318;
+  --card: #1e2130;
+  --card-hover: #262a3d;
+  --border: #2b2f42;
+  --py-blue: #306998;
+  --py-yellow: #e8b923;
+  --html-orange: #e44d26;
+  --text: #f5f5f5;
+  --muted: #9aa0b4;
+  --muted-2: #6b7086;
+  --code-bg: #1e1e2e;
+  --code-text: #e6e6ea;
+  --green: #9bd770;
+  --white: #ffffff;
+  --radius: 14px;
+  --maxw: 1080px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--dark);
+  color: var(--text);
+  font-family: -apple-system, "Segoe UI", Arial, Helvetica, sans-serif;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+code, pre, .mono {
+  font-family: "SFMono-Regular", Consolas, "Courier New", monospace;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+/* ---------- Nav ---------- */
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(17, 19, 24, 0.92);
+  backdrop-filter: saturate(140%) blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+
+.site-nav .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.2px;
+}
+
+.brand .tag {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: var(--py-yellow);
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "SFMono-Regular", Consolas, "Courier New", monospace;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.brand small {
+  display: block;
+  font-weight: 400;
+  color: var(--muted);
+  font-size: 11px;
+  margin-top: 1px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 4px;
+}
+
+.nav-links a {
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 13.5px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.nav-links a:hover { color: var(--text); background: var(--card); }
+.nav-links a.active { color: var(--text); background: var(--card); }
+
+/* ---------- Hero ---------- */
+.hero {
+  padding: 72px 0 56px;
+  border-bottom: 1px solid var(--border);
+}
+
+.kicker {
+  font-family: "SFMono-Regular", Consolas, "Courier New", monospace;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--py-yellow);
+  margin-bottom: 14px;
+}
+
+.kicker.orange { color: var(--html-orange); }
+.kicker.blue { color: var(--py-blue); }
+
+h1.page-title {
+  font-size: 40px;
+  margin: 0 0 12px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.lede {
+  font-size: 16.5px;
+  color: var(--muted);
+  max-width: 640px;
+  margin: 0;
+}
+
+/* ---------- Cards / grid (index) ---------- */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+  padding: 48px 0 72px;
+}
+
+.nav-card {
+  display: block;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 26px;
+  transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+}
+
+.nav-card:hover {
+  background: var(--card-hover);
+  border-color: var(--muted-2);
+  transform: translateY(-2px);
+}
+
+.nav-card .icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "SFMono-Regular", Consolas, "Courier New", monospace;
+  font-weight: 700;
+  font-size: 15px;
+  margin-bottom: 18px;
+  color: var(--ink);
+}
+
+.nav-card h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+.nav-card p {
+  margin: 0;
+  font-size: 13.5px;
+  color: var(--muted);
+}
+
+.nav-card .go {
+  margin-top: 16px;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--muted);
+  font-family: "SFMono-Regular", Consolas, "Courier New", monospace;
+}
+
+/* ---------- Sections ---------- */
+section.lesson {
+  padding: 56px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+section.lesson:last-of-type { border-bottom: none; }
+
+.lesson h2 {
+  font-size: 24px;
+  margin: 0 0 6px;
+}
+
+.lesson .desc {
+  color: var(--muted);
+  font-size: 14.5px;
+  max-width: 720px;
+  margin: 0 0 26px;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  align-items: start;
+}
+
+@media (max-width: 820px) {
+  .two-col { grid-template-columns: 1fr; }
+  .card-grid { grid-template-columns: 1fr; }
+  h1.page-title { font-size: 30px; }
+  .site-nav .wrap { flex-wrap: wrap; height: auto; padding: 12px 20px; gap: 8px; }
+  .nav-links { flex-wrap: wrap; }
+}
+
+/* ---------- Code block + copy button ---------- */
+.code-block {
+  position: relative;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.code-block .code-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 9px 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  font-size: 11px;
+  color: var(--muted);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.code-block pre {
+  margin: 0;
+  padding: 16px 18px;
+  overflow-x: auto;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--code-text);
+}
+
+.copy-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: var(--muted);
+  border-radius: 6px;
+  padding: 4px 9px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.12s ease, color 0.12s ease;
+}
+
+.copy-btn:hover { background: rgba(255,255,255,0.12); color: var(--text); }
+.copy-btn.copied { background: var(--green); color: #113018; border-color: var(--green); }
+.copy-btn svg { width: 13px; height: 13px; display: block; }
+
+/* ---------- Output pill ---------- */
+.output-pill {
+  margin-top: 12px;
+  background: var(--white);
+  color: var(--ink);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-family: "SFMono-Regular", Consolas, "Courier New", monospace;
+  font-size: 13px;
+  border-left: 4px solid var(--py-blue);
+}
+
+.output-pill .label {
+  display: block;
+  font-family: -apple-system, Arial, sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: #8a8f9c;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+/* ---------- Result / screenshot card ---------- */
+.result-card {
+  background: var(--white);
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.result-card .result-label {
+  padding: 9px 14px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  color: #8a8f9c;
+  border-bottom: 1px solid #ececec;
+}
+
+.result-card .result-body {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+}
+
+.result-card img {
+  max-width: 100%;
+  max-height: 320px;
+  display: block;
+}
+
+/* ---------- Reference tables ---------- */
+.ref-table-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.ref-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 22px;
+}
+
+.ref-card h4 {
+  margin: 0 0 14px;
+  font-size: 14px;
+  color: var(--html-orange);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.ref-card table { width: 100%; border-collapse: collapse; }
+
+.ref-card td {
+  padding: 8px 0;
+  font-size: 13px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+.ref-card tr:last-child td { border-bottom: none; }
+
+.ref-card td:first-child {
+  font-family: "SFMono-Regular", Consolas, "Courier New", monospace;
+  font-weight: 700;
+  color: var(--text);
+  width: 42%;
+  padding-right: 10px;
+}
+
+.ref-card td:last-child { color: var(--muted); }
+
+/* ---------- Install tabs ---------- */
+.tabs { display: flex; gap: 6px; margin-bottom: 14px; }
+
+.tab-btn {
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.tab-btn.active { background: var(--py-blue); color: var(--white); border-color: var(--py-blue); }
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+
+/* ---------- Assessment / test page ---------- */
+.question-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px 30px;
+  margin-bottom: 26px;
+}
+
+.question-card .q-num {
+  font-family: "SFMono-Regular", Consolas, "Courier New", monospace;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--py-yellow);
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+.question-card h3 { margin: 0 0 10px; font-size: 18px; }
+.question-card p.prompt { color: var(--muted); font-size: 14px; margin: 0 0 18px; }
+
+.reveal-btn {
+  background: var(--py-blue);
+  color: var(--white);
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 13.5px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 16px;
+}
+
+.reveal-btn:hover { background: #3a7dab; }
+
+.answer-box {
+  display: none;
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px dashed var(--border);
+}
+
+.answer-box.shown { display: block; }
+
+.answer-tag {
+  display: inline-block;
+  background: var(--green);
+  color: #113018;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 5px;
+  margin-bottom: 12px;
+  letter-spacing: 0.4px;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  padding: 40px 0 60px;
+  text-align: center;
+  color: var(--muted-2);
+  font-size: 12.5px;
+}
+
+/* ---------- Challenge banner (on challenge.html only) ---------- */
+.challenge-banner {
+  background: var(--ink);
+  color: var(--text);
+  padding: 14px 28px;
+  font-size: 13px;
+  border-bottom: 3px solid var(--py-yellow);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-family: -apple-system, "Segoe UI", Arial, Helvetica, sans-serif;
+}
+
+.challenge-banner a {
+  background: var(--py-yellow);
+  color: var(--ink);
+  padding: 7px 14px;
+  border-radius: 7px;
+  font-weight: 700;
+  font-size: 12.5px;
+}

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML &amp; CSS Basics — Introduction to Programming</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <div class="brand">
+      <div class="tag">&lt;/&gt;</div>
+      <div>Introduction to Programming<small>Network School · Ansel Lim</small></div>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="python.html">Python</a>
+      <a href="html.html" class="active">HTML &amp; CSS</a>
+      <a href="test.html">Test Yourself</a>
+      <a href="challenge.html">Challenge</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="kicker orange">Part Two</div>
+    <h1 class="page-title">HTML &amp; CSS Basics</h1>
+    <p class="lede">Structure a page with HTML tags, then style it with CSS — spacing, colour, layout, lists, tables and forms. Every example shows the code and its rendered result.</p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ===================== REFERENCE ===================== -->
+  <section class="lesson" id="reference">
+    <div class="kicker orange">Reference</div>
+    <h2>Common Tags &amp; CSS Attributes</h2>
+    <p class="desc">Keep this nearby while you work through the examples below.</p>
+    <div class="ref-table-wrap">
+      <div class="ref-card">
+        <h4>HTML Tags</h4>
+        <table>
+          <tr><td>&lt;h1&gt;–&lt;h6&gt;</td><td>Headings</td></tr>
+          <tr><td>&lt;p&gt;</td><td>Paragraph</td></tr>
+          <tr><td>&lt;div&gt;</td><td>Block container</td></tr>
+          <tr><td>&lt;span&gt;</td><td>Inline container</td></tr>
+          <tr><td>&lt;a&gt;</td><td>Link</td></tr>
+          <tr><td>&lt;img&gt;</td><td>Image</td></tr>
+          <tr><td>&lt;ul&gt;/&lt;ol&gt;/&lt;li&gt;</td><td>Lists</td></tr>
+          <tr><td>&lt;table&gt;/&lt;tr&gt;/&lt;td&gt;/&lt;th&gt;</td><td>Tables</td></tr>
+          <tr><td>&lt;form&gt;/&lt;input&gt;/&lt;button&gt;</td><td>Forms</td></tr>
+        </table>
+      </div>
+      <div class="ref-card">
+        <h4>CSS Attributes</h4>
+        <table>
+          <tr><td>color</td><td>text colour</td></tr>
+          <tr><td>background-color</td><td>fill colour</td></tr>
+          <tr><td>font-family / -size</td><td>typeface &amp; size</td></tr>
+          <tr><td>padding</td><td>space inside the border</td></tr>
+          <tr><td>margin</td><td>space outside the border</td></tr>
+          <tr><td>border</td><td>outline around the box</td></tr>
+          <tr><td>display</td><td>flex, block, inline…</td></tr>
+          <tr><td>width / height</td><td>box size</td></tr>
+          <tr><td>justify/align-items</td><td>flex alignment</td></tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== STYLING ===================== -->
+  <section class="lesson" id="styling">
+    <div class="kicker orange">Styling</div>
+    <h2>Font, Colour &amp; Spacing</h2>
+    <p class="desc"><code>font-family</code> and <code>font-size</code> set the typeface; <code>color</code> and <code>background-color</code> set the text and fill colours; <code>padding</code>, <code>margin</code> and <code>border</code> shape the box.</p>
+    <div class="two-col">
+      <div class="code-block">
+        <div class="code-label"><span>CSS</span>
+          <button class="copy-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>Copy</button>
+        </div>
+        <pre><code>.box {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  color: white;
+  background-color: steelblue;
+  padding: 20px;
+  margin: 10px;
+  border: 2px solid black;
+}</code></pre>
+      </div>
+      <div class="result-card">
+        <div class="result-label">Result</div>
+        <div class="result-body"><img src="assets/style-demo.png" alt="Styled box example result"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CENTERING ===================== -->
+  <section class="lesson" id="centering">
+    <div class="kicker orange">Layout</div>
+    <h2>Centering a Div with Flexbox</h2>
+    <p class="desc"><code>display: flex</code> + <code>justify-content: center</code> (left/right) + <code>align-items: center</code> (top/bottom) centers a box on both axes. For horizontal-only centering, <code>margin: 0 auto</code> also works.</p>
+    <div class="two-col">
+      <div class="code-block">
+        <div class="code-label"><span>CSS</span>
+          <button class="copy-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>Copy</button>
+        </div>
+        <pre><code>body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* horizontal-only alternative */
+.box {
+  width: 200px;
+  margin: 0 auto;
+}</code></pre>
+      </div>
+      <div class="result-card">
+        <div class="result-label">Result</div>
+        <div class="result-body"><img src="assets/center-demo.png" alt="Centered box example result"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== COLORS ===================== -->
+  <section class="lesson" id="colors">
+    <div class="kicker orange">Colour</div>
+    <h2>Colour Names, RGB &amp; Hex</h2>
+    <p class="desc">CSS accepts a colour written three ways — a plain name, an <code>rgb()</code> triplet, or a hex code — and all three are fully interchangeable.</p>
+    <div class="two-col">
+      <div class="code-block">
+        <div class="code-label"><span>CSS</span>
+          <button class="copy-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>Copy</button>
+        </div>
+        <pre><code>/* all three lines do the same thing */
+color: red;
+color: rgb(255, 0, 0);
+color: #FF0000;</code></pre>
+      </div>
+      <div class="result-card">
+        <div class="result-label">Result</div>
+        <div class="result-body"><img src="assets/colors-demo.png" alt="Colour name vs rgb vs hex example result"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== LISTS ===================== -->
+  <section class="lesson" id="lists">
+    <div class="kicker orange">Content</div>
+    <h2>Lists: &lt;ul&gt;, &lt;ol&gt; &amp; &lt;li&gt;</h2>
+    <p class="desc"><code>&lt;ul&gt;</code> makes an unordered (bulleted) list; <code>&lt;ol&gt;</code> makes an ordered (numbered) list. Each item goes inside its own <code>&lt;li&gt;</code>.</p>
+    <div class="two-col">
+      <div class="code-block">
+        <div class="code-label"><span>HTML</span>
+          <button class="copy-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>Copy</button>
+        </div>
+        <pre><code>&lt;ul&gt;
+  &lt;li&gt;Apples&lt;/li&gt;
+  &lt;li&gt;Bananas&lt;/li&gt;
+  &lt;li&gt;Milk&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Preheat oven&lt;/li&gt;
+  &lt;li&gt;Mix batter&lt;/li&gt;
+  &lt;li&gt;Bake 20 min&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+      </div>
+      <div class="result-card">
+        <div class="result-label">Result</div>
+        <div class="result-body"><img src="assets/lists-demo.png" alt="Ordered and unordered list example result"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TABLES ===================== -->
+  <section class="lesson" id="tables">
+    <div class="kicker orange">Content</div>
+    <h2>Tables: &lt;table&gt;, &lt;td&gt; &amp; &lt;th&gt;</h2>
+    <p class="desc"><code>&lt;table&gt;</code> holds rows (<code>&lt;tr&gt;</code>); <code>&lt;th&gt;</code> is a header cell, <code>&lt;td&gt;</code> is a normal data cell.</p>
+    <div class="two-col">
+      <div class="code-block">
+        <div class="code-label"><span>HTML</span>
+          <button class="copy-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>Copy</button>
+        </div>
+        <pre><code>&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Name&lt;/th&gt;
+    &lt;th&gt;Age&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Ansel&lt;/td&gt;
+    &lt;td&gt;16&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+      </div>
+      <div class="result-card">
+        <div class="result-label">Result</div>
+        <div class="result-body"><img src="assets/table-demo.png" alt="Table example result"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FORMS ===================== -->
+  <section class="lesson" id="forms">
+    <div class="kicker orange">Content</div>
+    <h2>Forms &amp; Inputs</h2>
+    <p class="desc"><code>&lt;input&gt;</code> collects data — <code>type="text"</code> for words, <code>type="number"</code> for integers, <code>type="date"</code> for a date picker. <code>&lt;button type="submit"&gt;</code> sends the form.</p>
+    <div class="two-col">
+      <div class="code-block">
+        <div class="code-label"><span>HTML</span>
+          <button class="copy-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>Copy</button>
+        </div>
+        <pre><code>&lt;form&gt;
+  &lt;input type="text"
+    placeholder="Your name"&gt;
+  &lt;input type="number"
+    placeholder="Your age"&gt;
+  &lt;input type="date"&gt;
+  &lt;button type="submit"&gt;
+    Submit
+  &lt;/button&gt;
+&lt;/form&gt;</code></pre>
+      </div>
+      <div class="result-card">
+        <div class="result-label">Result</div>
+        <div class="result-body"><img src="assets/form-demo.png" alt="Form example result"></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  Introduction to Programming · Network School · <a href="test.html" style="color:var(--html-orange); font-weight:700;">Next: Test Yourself →</a>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
